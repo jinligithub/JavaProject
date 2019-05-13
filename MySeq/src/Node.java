@@ -1,7 +1,6 @@
 public class Node {
     //节点内容
     int data;
-
     //下一个节点
     Node next;
 

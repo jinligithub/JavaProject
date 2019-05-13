@@ -6,6 +6,7 @@ public class Test {
         n1.append(n2).append(n3).append(new Node(4));
         System.out.println(n1.next().next().getdata());
         System.out.println(n1.next().next().isLast());
+		
 
     }
 }
