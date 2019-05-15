@@ -10,7 +10,8 @@ public class DoubleLinkImp implements Sequence {
     private Node tail;
     //链表的长度
     private int size;
-
+	
+	
     //内部类节点
     private class Node{
         private Node pre;//前一个节点的指针
@@ -49,24 +50,22 @@ public class DoubleLinkImp implements Sequence {
         //取得要删除的节点
         Node cur=node(index);
         Node pre=cur.pre;
-        System.out.println(pre.data);
         Node next=cur.next;
-        System.out.println(next.data);
         //如果要删除的节点是头结点
         if(pre==null){
             head=cur.next;
             cur.next=null;
         }else if(next==null){//删除尾节点
             tail=cur.pre;
-            cur.pre=null;
+            tail.next=null;
         }else {
-            //不是头结点
+            //不是头结点,也不是尾节点
         pre.next=cur.next;
         next.pre=cur.pre;
         cur.pre=cur.next=null;
-        cur.data=null;
-    }
+        }
         Object data=cur.data;
+        cur.data=null;
         size--;
         return data;
     }

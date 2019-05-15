@@ -11,6 +11,7 @@ public class Test {
 //        dl.add(6);
 //        dl.add(7);
 //        dl.add(8);
+
         System.out.println(dl.size());
         dl.show();
         System.out.println(dl.contains(7));
@@ -24,7 +25,8 @@ public class Test {
 //        System.out.println(dl.get(7));
         //System.out.println(dl.get(8));
         System.out.println();
-        System.out.println(dl.remove(0));
+        //System.out.println(dl.remove(0));
+        System.out.println(dl.remove(1));
         dl.show();
     }
 }
