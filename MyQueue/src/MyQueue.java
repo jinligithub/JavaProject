@@ -5,6 +5,7 @@ public class MyQueue {
     public MyQueue(){
         elements=new int[0];
     }
+	
     //入队
     public  void add(int element){
         //创建一个数组
