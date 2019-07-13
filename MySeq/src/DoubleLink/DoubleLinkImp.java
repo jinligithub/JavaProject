@@ -11,7 +11,6 @@ public class DoubleLinkImp implements Sequence {
     //链表的长度
     private int size;
 	
-	
     //内部类节点
     private class Node{
         private Node pre;//前一个节点的指针
