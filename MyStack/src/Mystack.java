@@ -24,6 +24,7 @@ public class Mystack {
         //用新的数组替换旧得数组
         elements=newArr;
     }
+	
     //取出栈顶元素
     public int pop(){
         //防止数组越界,栈中没有元素
