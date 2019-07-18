@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        //方式一：js方式遍历
+        /*$(function () {
+            //1.获取所有的ui下的li
+            var cities=$("#city li");
+            //2.遍历
+            for (var i = 0; i <cities.length ; i++) {
+                //获取内容
+                alert(i+":"+cities[i].innerHTML);
+                break:结束循环
+                continue：结束本轮循环，继续下次循环
+            }
+
+        });*/
+
+        //方式二：jQuery方式遍历
+       $(function () {
+            //1.获取所有的ui下的li
+            var cities = $("#city li");
+            //2.遍历
+             /*cities.each(function (index,element) {
+
+                  // 1.获取li对象：this(该方法无法获取li的索引)
+                  alert(this.innerHTML);
+                 //把this转为Jquery对象
+                  alert($(this).html());
+
+                 // // 2.获取li对象：在回调函数中定义参数：index(索引),element(元素对象)
+                  alert(index+":"+element.innerHTML);
+                  //把element转为Jquery对象
+                  alert(index+":"+$(element).html());
+
+
+                 //break和contine
+
+                 //如果是上海，就结束循环
+                 //if("上海"==$(element).html()){
+                     //如果当前值返回false，则结束循环（break）
+                     //如果返回true,则结束本次循环，继续下次循环
+                     return false;
+
+                 }
+                 alert(index+":"+$(element).html());
+             }); */
+
+             //3.$.each(object, [callback])
+           $.each(cities,function () {
+               alert($(this).html())
+           });
+
+        });
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>
