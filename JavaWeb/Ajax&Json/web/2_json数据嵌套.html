@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json格式</title>
+    <script>
+        //1.定义基本格式
+        var person={"name":"zhangsan",age:23,'sex':true};
+
+
+        //2.嵌套格式  {}--->[]
+        var Persons={"Persons":[{"name":"zhangsan1",age:23,'sex':true},
+                {"name":"zhangsan2",age:23,'sex':true},
+                {"name":"zhangsan3",age:23,'sex':true}]};
+        //Persons（对象名称）.Persons[2](键的名称).name（属性名称）
+        var name1=Persons.Persons[2].name;
+        alert(name1);
+
+
+        //3.嵌套格式   [] --- >  {}
+        var Persons2=[{"name":"lisi",age:23,'sex':true},
+            {"name":"zsan",age:23,'sex':true},
+            {"name":"san",age:23,'sex':true}];
+        alert(Persons2[1].name);
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

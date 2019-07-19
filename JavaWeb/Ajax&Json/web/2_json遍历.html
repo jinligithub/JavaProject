@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json格式</title>
+    <script>
+        //1.定义基本格式
+        var person={"name":"zhangsan",age:23,'sex':true};
+
+        //2.嵌套格式   [] --- >  {}
+        var Persons2=[{"name":"lisi",age:23,'sex':true},
+                      {"name":"zsan",age:23,'sex':true},
+                      {"name":"san",age:23,'sex':true}];
+        alert(Persons2[1].name);
+
+        //遍历方法一：
+        //获取Person对象的中的键值对
+        //for in循环
+        for(var key in Persons2){
+            //下面的这种方式是无法获取值的，因为相当于 Person."name"格式
+            //alert(key+":"+Persons.key);
+            alert(key+":"+Persons2[key]);
+        }
+
+        //遍历方式二：双层for循环
+        for(var i=0;i<Persons2.length;i++){
+            var p=Persons2[i];
+            for(var key in p){
+                alert(key +":"+p[key]);
+            }
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>
