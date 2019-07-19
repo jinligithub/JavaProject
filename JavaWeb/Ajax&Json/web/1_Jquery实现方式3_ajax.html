@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        //定义方法
+        function fun() {
+            $.post("ajaxServlet",{username:"AAA"},function (data) {
+                alert(data)
+            },"text");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun(); ">
+<input>
+</body>
+</html>

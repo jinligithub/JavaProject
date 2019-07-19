@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        //定义方法
+        function fun() {
+            //使用$.ajax()发送异步请求
+            $.ajax({
+                url:"ajaxServlet",//请求路径
+                type:"POST",//请求方式
+                //data:"username:jack&age=23",//请求参数
+                data:{"username":"jack","age":23},
+                //响应成功之后的回调函数
+                success:function (data) {
+                    alert(data);
+                },
+                //error如果请求响应出错，会执行回调函数
+                error:function () {
+                    alert("出错啦...")
+                },
+                dataType:"text"//设置接收到的响应数据的格式
+            });
+        }
+    </script>
+
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun(); ">
+<input>
+</body>
+</html>
